@@ -17,9 +17,17 @@ Vue.prototype.$ajax=axios
 // axios.defaults.baseURL = "http://192.168.31.183:8082";
 axios.defaults.timeout = 3000;
 // 运价管理基础路径
-// axios.defaults.baseURL="http://192.168.31.174:12679"
-axios.defaults.baseURL="http://localhost"
-
+axios.defaults.baseURL="http://192.168.31.174:12679"
+// axios.defaults.baseURL="http://localhost"
+// axios.defaults.withCredentials=true
+// axios.defaults.headers['Authorization'] = "Bearer " + window.localStorage["token"];
+axios.interceptors.request.use(request=>{
+  let token= window.localStorage["token"]
+  if(token){
+    request.headers.authorization="Bearer " +token
+  }
+  return request
+},error=>{})
 Vue.use(Element)
 
 Vue.use(Vueaxios,axios)

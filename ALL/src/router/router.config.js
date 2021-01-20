@@ -50,11 +50,13 @@ import RegularTables from 'src/components/Dashboard/Views/Tables/RegularTables.v
 import ExtendedTables from 'src/components/Dashboard/Views/Tables/ExtendedTables.vue'
 import PaginatedTables from 'src/components/Dashboard/Views/Tables/PaginatedTables.vue'
 import AddData from 'src/components/Dashboard/Views/Tables/AddData.vue'
-// order pages
+// order 订单信息 pages
 import guopiaoSearch from 'src/components/Dashboard/Views/Maps/guopiao.vue'
 import chupiaoControl from 'src/components/Dashboard/Views/Maps/chupiaoControl.vue'
 import dingdanSearch from 'src/components/Dashboard/Views/Maps/dingdanSearch.vue'
 
+// 订单信息跳转路由
+import orderInfo from 'src/components/Dashboard/Views/Maps/tankuang/orderInfo.vue'
 // Calendar
 import Calendar from 'src/components/Dashboard/Views/Calendar/CalendarRoute.vue'
 // Charts
@@ -280,6 +282,14 @@ let mapsMenu = {
         requireAuth:true
       },
       component: dingdanSearch
+    },
+    {
+      path:'tankuang/orderInfo',
+      name:'tankuang/orderInfo',
+      meta:{
+        requireAuth:true
+      },
+      component:orderInfo
     }
   ]
 }

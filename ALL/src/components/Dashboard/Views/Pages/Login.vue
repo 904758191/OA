@@ -308,14 +308,15 @@ export default {
  submit() {
    let data=this.form
    window.localStorage['token'] = ''
-    this.axios.post("/api/login",qs.stringify(data)).then((rtn) => {
+    this.axios.post("/login",qs.stringify(data)).then((rtn) => {
       // alert(qs.stringify({data}))
       // console.log(rtn)
       if (rtn.token) {
         // window.localStorage["uid"] = this.uid;
         // this.form.pwd=""
-        // window.localStorage["token"] = rtn.data.token;
-        this.$router.push("/maps/vector-map");
+        window.localStorage["token"] = rtn.token;
+        alert(window.localStorage["token"])
+        this.$router.push("/maps/dingdansearch");
         // window.location.href = "/forms/tfdate";
       } else {
         alert("登录失败！");

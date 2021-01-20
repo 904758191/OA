@@ -19,7 +19,7 @@ const router = new Router({
 // var getRouter; // 用来获取后台拿到的路由
 
 router.beforeEach((to, from, next) => {
-  const access_token = localStorage.getItem("Access-Token");
+  const access_token = localStorage.getItem("token");
   if(to.matched.some((name)=>name.meta.requireAuth)){
     if(access_token){
       console.log('登录成功11')
