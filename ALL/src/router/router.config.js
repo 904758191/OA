@@ -56,7 +56,13 @@ import chupiaoControl from 'src/components/Dashboard/Views/Maps/chupiaoControl.v
 import dingdanSearch from 'src/components/Dashboard/Views/Maps/dingdanSearch.vue'
 
 // 订单信息跳转路由
+// 表格中的渠道订单号跳转
 import orderInfo from 'src/components/Dashboard/Views/Maps/tankuang/orderInfo.vue'
+// 表格中的航段航班号跳转
+import storeSummary from 'src/components/Dashboard/Views/Maps/tankuang/storesummary.vue'
+// 出票控制台路由
+// 表格ID跳转
+import tktissueShow from 'src/components/Dashboard/views/Maps/tankuang/tktissueshow.vue' 
 // Calendar
 import Calendar from 'src/components/Dashboard/Views/Calendar/CalendarRoute.vue'
 // Charts
@@ -290,6 +296,22 @@ let mapsMenu = {
         requireAuth:true
       },
       component:orderInfo
+    },
+    {
+      path:'tankuang/storesummary',
+      name:'tankuang/storesummary',
+      meta:{
+        requireAuth:true
+      },
+      component:storeSummary
+    },
+    {
+      path:'tankuang/tktissueshow',
+      name:'tankuang/tktissueshow',
+      meta:{
+        requireAuth:true
+      },
+      component:tktissueShow
     }
   ]
 }

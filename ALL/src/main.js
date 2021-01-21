@@ -11,7 +11,10 @@ import $ from 'jquery'
 import axios from 'axios'
 import Vueaxios from 'vue-axios'
 import layer from 'vue-layer'
+import 'vue-layer/lib/vue-layer.css'
+import _ from 'lodash'
 Vue.prototype.$layer=layer(Vue)
+
 Vue.prototype.$ajax=axios
 // 运价管理基础路径
 // axios.defaults.baseURL = "http://192.168.31.183:8082";
@@ -71,6 +74,7 @@ Vue.use(SideBar, {sidebarLinks: sidebarLinks})
 Vue.use(VeeValidate,config)
 locale.use(lang)
 Vue.use(Antd)
+Vue.use(_)
 
 // configure router
 // const router = new VueRouter({

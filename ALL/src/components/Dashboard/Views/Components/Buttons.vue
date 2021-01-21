@@ -8,7 +8,7 @@
               <h4 class="card-title">Colors</h4>
             </div>
             <div class="card-content">
-              <button class="btn btn-default btn-fill btn-wd">Default</button>
+              <button class="btn btn-default btn-fill btn-wd" @click="tanchu()">Default</button>
               <button class="btn btn-primary btn-fill btn-wd">Primary</button>
               <button class="btn btn-info btn-fill btn-wd">Info</button>
               <button class="btn btn-success btn-fill btn-wd">Success</button>
@@ -265,6 +265,13 @@
         defaultPagination: 3,
         infoPagination: 5
       }
+    },
+    methods:{
+      // tanchu(){
+      //   this.$layer.msg('hello'
+
+      //   )
+      // }
     }
   }
 </script>

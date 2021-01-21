@@ -34,7 +34,10 @@
       <el-table-column label="ID">
         <template slot-scope="scope">
           <!-- <a target="_blank" :href="'/order/tktissueshow.htm?id='+scope.id+'&r='+Math.random()">  -->
-          {{ scope.row.id }}
+          <router-link :to="{path:`/maps/tankuang/tktissueshow?`+'id='+scope.row.id+'&r='+Math.random()}">
+            {{ scope.row.id }}
+          </router-link>
+          
           <!-- </a>  -->
         </template>
       </el-table-column>
